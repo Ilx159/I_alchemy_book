@@ -1,4 +1,4 @@
-# I_alchemuy_book
+# I_alchemy_book
 
 Um aplicativo em **C** com interface gráfica (GTK3) e banco de dados (SQLite3) para gerenciar **ingredientes e poções** durante sessões de RPG. Ideal para jogadores que querem praticidade e organização na criação e consulta de receitas mágicas.
 
