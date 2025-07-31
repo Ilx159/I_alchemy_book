@@ -1,0 +1,69 @@
+<interface>
+  <object id="window" class="GtkWindow">
+    <property name="visible">True</property>
+    <property name="title">I_alchemy_book</property>
+    <child>
+    <object id="Grid" class="GtkGrid">
+
+      <object id="Options_Grid" class="GtkGrid">
+
+        <object id="Program_Name" class="GtkLabel">
+          <property name="label">I Alchemy Book</property>
+          <property name="top-attach">0</property>
+        </object>
+
+        <object id="" class="GtkLabel">
+          <property name="label">I Alchemy Book</property>
+          <property name="top-attach">0</property>
+        </object>
+
+        <object class="SearchEntry" id="SearchEntry">
+          <property name="placeholder-text">Search</property>
+          <property name="top-attach">1</property>
+          <signal name="search-changed" handler="on_SearchEntry_search_changed"/>
+        </object>
+
+        <object id="tag_list_scroll" class="GtkScrolledWindow">
+          <property name="vexpand">True</property>
+          <property name="hscrollbar-policy">never</property>
+          <child>
+            <object class="GtkListBox" id="tag_list">
+              <signal name="row-selected" handler="on_tag_list_row_selected"/>
+            </object>
+          </child>
+        </object>
+
+        <object id="Button_Exit" class="GtkButton">
+          <property name="label">Exit</property>
+          <property name="top-attach">2</property>
+          <signal name="clicked" handler="on_Button_Exit_clicked"/>
+        </object>
+
+        <property name="left-attach">0</property>
+      </object>
+
+      <object id="Book_page1" class="TextView">
+        <property name="left-attach">2</property>
+      </object>
+      
+      <object id="Book_page2" class="TextView"> 
+        <property name="left-attach">1</property>
+      </object>
+
+    </object>
+    </child>
+    <property name="default-height">720</property>
+    <property name="default-width">1280</property>
+    <property name="resizable">True</property>
+    <property name="type-hint">dialog</property>
+    <property name="window-position">center</property>
+    <property name="titlebar">True</property>
+    <property name="decorated">True</property>
+    <property name="application">I_alchemy_book</property>
+  </object>
+</interface>
+<signal name="on_SearchEntry_search_changed" handler="on_SearchEntry_search_changed"/>
+<signal name="on_tag_list_row_selected" handler="on_tag_list_row_selected"/>
+<signal name="on_Button_Exit_clicked" handler="on_Button_Exit_clicked"/>
+<signal name="on_window_destroy" handler="on_window_destroy"/>
+<signal name="on_window_close_request" handler="on_window_close_request"/>

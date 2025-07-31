@@ -1,0 +1,16 @@
+cc = gcc
+flags = -Wall `pkg-config --cflags gtk+-3.0 sqlite3` `pkg-config --libs gtk+-3.0 sqlite3` -fdiagnostics-color=always
+cwd = /home/ilx/Documents/I_alchemy_book
+builddir = /home/ilx/Documents/I_alchemy_book/build
+target = $builddir/I_alchemy_book
+
+rule link
+  command = $cc $flags -o $out $in
+
+rule compile
+  command = $cc $flags -c $in -o $out
+
+build $builddir/main.o: compile $cwd/src/main.c
+build $target: link $builddir/main.o
+
+default $target
