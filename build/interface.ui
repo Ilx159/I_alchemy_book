@@ -1,0 +1,89 @@
+<interface>
+  <object id="Window" class="GtkWindow">
+
+    <property name="visible">True</property>
+    <property name="title">I_alchemy_book</property>
+    <property name="default-height">720</property>
+    <property name="default-width">1280</property>
+    <property name="resizable">True</property>
+    <property name="type-hint">dialog</property>
+    <property name="window-position">center</property>
+    <property name="decorated">True</property>
+
+    <child>
+      <object id="Grid" class="GtkGrid">
+        <child>
+          <object id="Options_Grid" class="GtkGrid">
+            <child>
+              <object id="Program_Name" class="GtkLabel">
+                <property name="label">I Alchemy Book</property>
+              </object>
+              <packing>
+                <property name="top-attach">0</property>
+                <property name="left-attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSearchEntry" id="Search_Entry">
+                <property name="placeholder-text">Search</property>
+              </object>
+              <packing>
+                <property name="top-attach">1</property>
+                <property name="left-attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object id="Tag_List_Scroll" class="GtkScrolledWindow">
+                <property name="vexpand">True</property>
+                <property name="hscrollbar-policy">never</property>
+                <child>
+                  <object class="GtkListBox" id="Tag_List">
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="top-attach">2</property>
+                <property name="left-attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object id="Exit_Button" class="GtkButton">
+                <property name="label">Exit</property>
+              </object>
+              <packing>
+                <property name="top-attach">3</property>
+                <property name="left-attach">0</property>
+              </packing>
+            </child>
+            <property name="vexpand">True</property>
+            <property name="hexpand">True</property>
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">0</property>
+          </packing>
+        </child>
+        <child>
+          <object id="Book_Page1" class="GtkTextView">
+            <property name="vexpand">True</property>
+            <property name="hexpand">True</property>
+          </object>
+          <packing>
+            <property name="left-attach">1</property>
+            <property name="top-attach">0</property>
+          </packing>
+        </child>
+        <child>
+          <object id="Book_Page2" class="GtkTextView"> 
+            <property name="vexpand">True</property>
+            <property name="hexpand">True</property>
+          </object>
+          <packing>
+            <property name="left-attach">2</property>
+            <property name="top-attach">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>    
+  </object>
+</interface>

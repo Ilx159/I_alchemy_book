@@ -10,7 +10,7 @@ rule link
 rule compile
   command = $cc $flags -c $in -o $out
 
-build $builddir/main.o: compile $cwd/src/main.c
-build $target: link $builddir/main.o
+build $builddir/builder.o: compile $cwd/src/builder.c
+build $target: link $builddir/builder.o
 
 default $target
