@@ -6,7 +6,6 @@
     <property name="default-height">720</property>
     <property name="default-width">1280</property>
     <property name="resizable">True</property>
-    <property name="type-hint">dialog</property>
     <property name="window-position">center</property>
     <property name="decorated">True</property>
 
